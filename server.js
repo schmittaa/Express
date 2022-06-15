@@ -7,7 +7,7 @@ const h = date.getHours()
 const PORT = process.env.PORT || 3000;
 
 const logger = (req, res, next) => {
-    if (((h< 9)&&(h>17))||((d===0)&&(d===6))){     
+    if ((h< 9)||(h>17)||(d===0)||(d===6)){     
             res.sendFile(path.join(__dirname, './views/Erreur.html'));    
     }
     
